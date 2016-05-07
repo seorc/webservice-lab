@@ -8,6 +8,7 @@ class TokensController < ApplicationController
     @credit_card = CreditCard.new credit_card_params
 
     # TODO Build the real token.
+    # TODO Store the token to in-memory DB.
     @token = {token: 'temporal token'}
 
     respond_to do |format|

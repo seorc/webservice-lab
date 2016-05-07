@@ -1,7 +1,5 @@
 require 'test_helper'
 
-# TODO Missing expiration_date validations.
-
 class CreditCardTest < ActiveSupport::TestCase
 
   test 'the credit card user name must have at least 10 chars' do

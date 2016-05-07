@@ -2,6 +2,10 @@ class CreditCard
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  # TODO Missing expiration_date validations.
+  # TODO Derivate :bin, :scheme from :number.
+  # TODO Ensure :number and :cvc are never persisted.
+
   SCHEMES = %w(CR DB)
   BRANDS = %w(AMEX VISA MC)
 
@@ -21,6 +25,5 @@ class CreditCard
   validates :brand, inclusion: { in: BRANDS }
 
   attr_accessor :cvc, :number
-
 
 end
