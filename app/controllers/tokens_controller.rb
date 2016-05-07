@@ -4,6 +4,7 @@ class TokensController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def create
+    #TODO Upsert the credit card.
     @credit_card = CreditCard.new credit_card_params
 
     # TODO Build the real token.
@@ -18,7 +19,7 @@ class TokensController < ApplicationController
   private
 
     def credit_card_params
-      params.permit(:owner_name,
-        :event, :bin, :last_four, :expiration_date, :scheme, :brand)
+      params.permit(:owner_name, :number, :cvc,
+        :expiration_date, :scheme, :brand)
     end
 end

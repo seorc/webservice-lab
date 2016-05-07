@@ -19,4 +19,8 @@ class CreditCard
   validates :bin, :last_four, numericality: {only_integer: true}
   validates :scheme, inclusion: { in: SCHEMES }
   validates :brand, inclusion: { in: BRANDS }
+
+  attr_accessor :cvc, :number
+
+
 end
