@@ -62,4 +62,24 @@ class CreditCardTest < ActiveSupport::TestCase
       assert_match /can't be blank/, (cc.errors.get(fld) || []).join('|'), "failed for #{fld}"
     end
   end
+
+  test 'bin is calculated from number' do
+    skip 'todo'
+  end
+
+  test 'last_four is calculated from number' do
+    skip 'todo'
+  end
+
+  test 'number is never persisted' do
+    skip 'todo'
+  end
+
+  test 'cvc is never persisted' do
+    skip 'todo'
+  end
+
+  test 'expiration_date has a valid format' do
+    skip 'todo'
+  end
 end
