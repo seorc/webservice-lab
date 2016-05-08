@@ -26,4 +26,8 @@ class CreditCard
 
   attr_accessor :cvc, :number
 
+  def expired?
+    return expiration_date < Date.today
+  end
+
 end

@@ -5,11 +5,10 @@ class TokensController < ApplicationController
 
   def create
     #TODO Upsert the credit card.
-    @credit_card = CreditCard.new credit_card_params
+    credit_card = CreditCard.new credit_card_params
 
-    # TODO Build the real token.
-    # TODO Store the token to in-memory DB.
-    @token = {token: 'temporal token'}
+    @token = Token.new credit_card
+    @token.store
 
     respond_to do |format|
       # TODO Actually redirect to the token on success.

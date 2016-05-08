@@ -63,6 +63,10 @@ class CreditCardTest < ActiveSupport::TestCase
     end
   end
 
+  test 'the card is invalid if it is expired' do
+    skip 'todo'
+  end
+
   test 'bin is calculated from number' do
     skip 'todo'
   end
